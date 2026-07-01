@@ -31,8 +31,7 @@ water-quality diagnostics, spatial habitat-shift maps, and supplementary tests).
 
 > This analysis was completed as coursework for **Environmental Awareness
 > (2022/23, Semester 2)** and is published to GitHub here for reference. The study
-> window is the 10 AFCD monitoring periods **2012-13 to 2021-22**, matching the
-> data available at that time (the 2022-23 report is intentionally not used).
+> window is the 10 AFCD monitoring periods **2012-13 to 2021-22**.
 
 ## Research question
 
