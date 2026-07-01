@@ -1,25 +1,48 @@
-# Hong Kong Chinese White Dolphin — Habitat-Use Pipeline (2012–2022)
+# Chinese White Dolphin Habitat Loss and Conservation in Western Hong Kong (2012–2022)
 
-A reproducible pipeline that turns the Agriculture, Fisheries and Conservation
+The Chinese White Dolphin (*Sousa chinensis*) is a species of conservation
+concern in the Pearl River Estuary, and the western waters of Hong Kong —
+especially around Lantau Island — hold one of its most important local
+populations. Over the last decade these waters absorbed large-scale reclamation
+for the Hong Kong–Zhuhai–Macau Bridge (HZMB) and the airport's Three-Runway
+System (3RS). This repository quantifies, on one reproducible panel, how the
+dolphins' occurrence and core habitat changed across 2012–2022 and how that
+change lines up with reclamation — evidence intended to inform conservation of
+the population and the effectiveness of protective measures.
+
+It does this end to end: it turns the Agriculture, Fisheries and Conservation
 Department (AFCD) marine-mammal monitoring reports and the Environmental
 Protection Department (EPD) marine water-quality archive into a clean,
-model-ready panel — and runs the full analysis (effort-controlled trend model,
-water-quality VIF diagnostics, spatial habitat-shift maps, and supplementary
-tests) for studying changes in Chinese White Dolphin (*Sousa chinensis*) habitat
-use in the western waters of Hong Kong.
+model-ready panel, then runs the full analysis (effort-controlled trend model,
+water-quality diagnostics, spatial habitat-shift maps, and supplementary tests).
 
-> Prepared for **Environmental Awareness (2022/23, Semester 2)** as a coursework
-> resubmission. The study window is the 10 AFCD monitoring periods **2012-13 to
-> 2021-22** (the 2022-23 report is intentionally not used, matching the data
-> available in that timeframe).
+### Key conservation findings
+
+- After controlling for survey effort, the on-effort sighting rate fell about
+  **12.4% per year** (~70% cumulative), with an abrupt shift around **2016**.
+- The 50% core-use area contracted from **45 to 26 km²** and its centroid shifted
+  about **6.5 km south-west**, away from the reclamation front.
+- **North-East Lantau was effectively abandoned by 2015**, during the HZMB
+  reclamation period and before the compensatory marine parks were designated.
+- Group size showed no trend, so the decline reflects **fewer dolphins present**,
+  not smaller groups — a range-contraction signal, not group fragmentation.
+- The compensatory marine parks (2016 onward) **post-date** the northern loss,
+  raising the question of whether protection was timely and well-placed.
+
+> This analysis was completed as coursework for **Environmental Awareness
+> (2022/23, Semester 2)** and is published to GitHub here for reference. The study
+> window is the 10 AFCD monitoring periods **2012-13 to 2021-22**, matching the
+> data available at that time (the 2022-23 report is intentionally not used).
 
 ## Research question
 
-Did the frequency, abundance, and spatial distribution of Chinese White Dolphins
-change across 2012–2022, and is that change associated with major human activity
-(large-scale reclamation) and environmental conditions? Every data source is
-aligned on a common **area × monitoring-period** key so the analysis can control
-for survey effort.
+Is the core habitat of the western-Hong-Kong Chinese White Dolphin population
+shrinking, and is that loss associated with large-scale reclamation? Concretely:
+did occurrence and abundance decline across 2012–2022 once survey effort is
+controlled; did the core habitat contract and shift; and were the compensatory
+marine parks timely and located where the dolphins actually were? Every data
+source is aligned on a common **area × monitoring-period** key so the analysis
+can control for survey effort.
 
 ## Study design at a glance
 
@@ -211,6 +234,28 @@ records**, master panel **98 rows**.
 > Causal timeline: NEL dolphins collapse to zero by 2015, **during** the HZMB
 > reclamation period and **before** the 3RS reclamation and the Brothers Marine
 > Park. The marine-park compensation post-dates the local disappearance.
+
+## Conservation implications
+
+- **Reclamation is associated with functional habitat loss in northern Lantau.**
+  The North-East Lantau collapse to zero by 2015 coincides with the HZMB
+  reclamation and the change-point sits at the 3RS reclamation onset. Future
+  coastal works in or near dolphin range should be assessed for cumulative,
+  not just project-by-project, habitat impact.
+- **Compensation was late and possibly mis-placed.** The Brothers (2016),
+  Southwest Lantau (2020), and South Lantau (2022) marine parks were designated
+  after the northern population had already gone. Protective measures need to be
+  in place *before* the pressure, and located where the dolphins actually are.
+- **The core habitat is contracting toward West and South-West Lantau.**
+  Conservation attention and any new protected-area boundaries should track the
+  shifting 50% core-use area (see the habitat-shift maps), not a static footprint.
+- **Occurrence, not group size, is falling** — consistent with animals leaving or
+  dying rather than aggregating differently, which raises the population-level
+  stakes and argues for sustained, effort-controlled long-term monitoring.
+
+These are indicative, hypothesis-generating conclusions from a small
+observational panel (see *Known limitations*), not causal proof; they are meant
+to focus conservation questions, not to settle them.
 
 ## License
 
