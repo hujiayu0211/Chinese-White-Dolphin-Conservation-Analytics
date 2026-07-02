@@ -131,7 +131,7 @@ accepts `--input-dir` / `--output-dir` (etc.) if you want different paths.
 | EPD **Historical Marine Water Quality Data** | Monthly station-level water quality (temperature, salinity, DO, turbidity, suspended solids, chlorophyll-a, nutrients) | Calendar files 2012–2022 |
 | Government / official project sources | Reclamation and marine-park event dates (see *Event dates*) | — |
 
-**Getting the data (not redistributed here):**
+**Getting the data:**
 
 - **AFCD monitoring reports** are published by AFCD; reports are available for the
   monitoring periods 2009-10 through the most recent year. This study uses
