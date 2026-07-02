@@ -1,0 +1,11 @@
+﻿source_file,monitoring_period,page_count,survey_start_page,survey_end_page,sighting_start_page,sighting_end_page,status,error,survey_rows,sighting_rows,bad_survey_rows,bad_sighting_rows,missing_survey_dates,missing_sighting_dates,missing_sighting_coordinates
+Final_Report_2012_13.pdf,2012-13,168,118,129,130,140,ok,,696,346,0,0,0,0,0
+Final_Report_2013_14.pdf,2013-14,231,182,193,194,203,ok,,703,317,0,0,0,0,0
+Final_Report_2014_15.pdf,2014-15,198,152,163,164,171,ok,,683,258,0,0,0,0,0
+Final_Report_2015_16.pdf,2015-16,163,118,129,130,137,ok,,714,250,0,0,0,0,0
+Final_Report_2016_17.pdf,2016-17,162,110,122,123,128,ok,,726,199,0,0,0,0,0
+Final_Report_2017_18.pdf,2017-18,174,116,128,129,134,ok,,763,201,0,0,0,0,0
+Final_Report_2018_19.pdf,2018-19,140,101,112,113,117,ok,,691,148,0,0,0,0,0
+Final_Report_2019_20.pdf,2019-20,138,98,110,111,115,ok,,718,158,0,0,0,0,0
+Final_Report_2020-21.pdf,2020-21,154,114,125,126,131,ok,,656,174,0,0,0,0,0
+Final_Report_2021_22.pdf,2021-22,147,114,125,126,130,ok,,673,158,0,0,0,0,0
