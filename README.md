@@ -73,14 +73,13 @@ can control for survey effort.
 │   ├── water_control_zone.png                 # EPD Southern WCZ station map
 │   ├── historical_marine_data_dictionary_en.pdf  # EPD CSV column dictionary
 │   └── afcd_further_reference.pdf             # AFCD literature + monitoring-report list
-├── raw_pdfs/                        # AFCD report PDFs (you provide; git-ignored)
+├── raw_pdfs/                        # AFCD report PDFs (access from afcd_further_reference.pdf)
 ├── marine_water_quality_data/       # EPD marine-historical-YYYY-en.csv (you provide; git-ignored)
 ├── processed/                       # ALL generated CSVs (created on run)
 └── result_figure/                   # ALL figures (fig_*.png) and result markdown (created on run)
 ```
 
-`raw_pdfs/` and `marine_water_quality_data/` are inputs you provide and are
-git-ignored (the underlying data is © AFCD / EPD and is not redistributed here).
+`raw_pdfs/` and `marine_water_quality_data/` are inputs you provide (the underlying data is © AFCD / EPD).
 `processed/` and `result_figure/` are created automatically when you run.
 
 ## Installation
