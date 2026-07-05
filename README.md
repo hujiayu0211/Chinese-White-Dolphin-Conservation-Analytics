@@ -16,6 +16,10 @@ Department (EPD) marine water-quality archive into a clean, model-ready panel,
 then runs the full analysis (effort-controlled trend model, water-quality
 diagnostics, spatial habitat-shift maps, and supplementary tests).
 
+![Core-use area migration, 2012–2022](result_figure/fig_core_migration.png)
+
+*The 50% core-use area contracts and shifts south-west, away from the northern reclamation front, over the study window.*
+
 ### Key conservation findings
 
 - After controlling for survey effort, the on-effort sighting rate fell about
@@ -29,10 +33,35 @@ diagnostics, spatial habitat-shift maps, and supplementary tests).
 - The compensatory marine parks (2016 onward) **post-date** the northern loss,
   raising the question of whether protection was timely and well-placed.
 
+![Effort-controlled encounter-rate trend](result_figure/fig_encounter_rate_trend.png)
+
 > This analysis was completed as coursework for **Environmental Awareness
 > (2022/23, Semester 2)** and is published to GitHub here for reference. The study
 > window is the 10 AFCD monitoring periods **2012-13 to 2021-22**, matching the
 > data available at that time (the 2022-23 report is intentionally not used).
+
+<details>
+<summary><strong>Contents</strong></summary>
+
+- [Research question](#research-question)
+- [Study design at a glance](#study-design-at-a-glance)
+- [Repository structure](#repository-structure)
+- [Installation](#installation)
+- [Quick start](#quick-start)
+- [Data sources](#data-sources)
+- [Water-quality station selection](#water-quality-station-selection)
+- [Pipeline](#pipeline)
+- [Output datasets](#output-datasets)
+- [Key processing decisions and data-quality fixes](#key-processing-decisions-and-data-quality-fixes)
+- [Validation performed](#validation-performed)
+- [Known limitations and caveats](#known-limitations-and-caveats)
+- [Conservation implications](#conservation-implications)
+- [Event dates (with sources)](#event-dates-with-sources)
+- [Documentation](#documentation)
+- [Selected references](#selected-references)
+- [License](#license)
+
+</details>
 
 ## Research question
 
@@ -73,14 +102,18 @@ can control for survey effort.
 │   ├── water_control_zone.png                 # EPD Southern WCZ station map
 │   ├── historical_marine_data_dictionary_en.pdf  # EPD CSV column dictionary
 │   └── afcd_further_reference.pdf             # AFCD literature + monitoring-report list
-├── raw_pdfs/                        # AFCD report PDFs (access from afcd_further_reference.pdf)
-├── marine_water_quality_data/       # EPD marine-historical-YYYY-en.csv (you provide; git-ignored)
-├── processed/                       # ALL generated CSVs (created on run)
-└── result_figure/                   # ALL figures (fig_*.png) and result markdown (created on run)
+├── raw_pdfs/                        # AFCD report PDFs — you supply these (© AFCD; only afcd_further_reference.pdf is included)
+├── marine_water_quality_data/       # EPD marine-historical-YYYY-en.csv (included; EPD open data)
+├── processed/                       # generated CSVs (pre-generated here; overwritten on run)
+└── result_figure/                   # figures (fig_*.png) + result markdown (pre-generated here; overwritten on run)
 ```
 
-`raw_pdfs/` and `marine_water_quality_data/` are inputs you provide (the underlying data is © AFCD / EPD).
-`processed/` and `result_figure/` are created automatically when you run.
+The EPD water-quality CSVs (`marine_water_quality_data/`), the derived `processed/`
+tables, and the `result_figure/` outputs are committed so the results can be
+inspected without re-running; the pipeline overwrites `processed/` and
+`result_figure/` when you run it. The one input you must supply yourself is the 10
+AFCD report PDFs in `raw_pdfs/` (© AFCD, not redistributed — see *Getting the
+data*).
 
 ## Installation
 
@@ -103,9 +136,9 @@ pip install -r requirements.txt
 ## Quick start
 
 ```bash
-# 1. put the input files in place:
-#   raw_pdfs/                    -> the 10 AFCD report PDFs (2012-13 … 2021-22)
-#   marine_water_quality_data/   -> the EPD marine-historical-*.csv files (2012–2022)
+# 1. supply the one input that isn't redistributed here:
+#   raw_pdfs/   -> the 10 AFCD report PDFs (2012-13 … 2021-22), © AFCD
+#   (the EPD marine-historical-*.csv files already ship in marine_water_quality_data/)
 
 # 2. run in order from the project root (no arguments needed):
 python extract_all_appendices_v2.py     # raw_pdfs            -> processed/
@@ -346,10 +379,17 @@ status, habitat, and conservation:
 - Leatherwood, S. and T. A. Jefferson. 1997. Dolphins and development in Hong Kong:
   a case study in conflict. *IBI Reports* 7:57-69.
 
+## Author
+
+**Jiayu Hu** — [jiayuhu.com](https://www.jiayuhu.com/) · hujiayu211[at]gmail[dot]com
+
 ## License
 
 Code in this repository is released under the MIT License (see `LICENSE`). The
 underlying AFCD and EPD data are © the Government of the Hong Kong SAR and are
 **not** covered by that license; cite the original sources and observe the data
-providers' terms of use. This repository contains processing/analysis code,
-derived tables, and reference documentation only.
+providers' terms of use. The included EPD marine water-quality CSVs are
+redistributed here as open government data with attribution; the AFCD monitoring
+report PDFs are **not** redistributed. Beyond the EPD open-data files, the
+repository contains processing/analysis code, derived tables, figures, and
+reference documentation.
